@@ -1,0 +1,21 @@
+Step-by-step guide to create and import the database schema:
+
+1. Log in to your MySQL client or phpMyAdmin.
+
+2. Create the database:
+   CREATE DATABASE pms_db;
+
+3. Select the database:
+   USE pms_db;
+
+4. Import the schema file:
+   - If using phpMyAdmin, select the pms_db database, then use the Import tab to upload and import the file pms_schema_clean.sql.
+   - If using MySQL CLI, run:
+     mysql -u your_username -p pms_db < path/to/pms_schema_clean.sql
+
+5. Verify tables are created by running:
+   SHOW TABLES;
+
+6. Update your config/db.php file with the database name 'pms_db' and your MySQL credentials.
+
+This will set up the database correctly for the Property Management System.
