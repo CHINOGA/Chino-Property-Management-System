@@ -69,7 +69,7 @@ try {
     <h1>Rent Payments</h1>
 
     <h2>Record New Payment</h2>
-    <form method="POST" action="rent_payments.php" class="mb-4">
+    <form method="POST" action="rent_collection.php" class="mb-4">
         <div class="mb-3">
             <label for="tenant_id" class="form-label">Tenant</label>
             <select id="tenant_id" name="tenant_id" class="form-select" required>

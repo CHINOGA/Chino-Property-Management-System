@@ -93,3 +93,13 @@ CREATE TABLE notifications (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
+
+-- Rent Payment Reminders table
+CREATE TABLE rent_payment_reminders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    lease_id INT NOT NULL,
+    reminder_date DATE NOT NULL,
+    sent BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (lease_id) REFERENCES leases(id) ON DELETE CASCADE
+);
